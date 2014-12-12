@@ -1,0 +1,309 @@
+ <!DOCTYPE html>
+<html >
+<head>
+<!--In the header of your page, paste the following for Kendo UI Web styles-->
+<link rel="stylesheet" href="css/foundation.css">
+
+  <!-- This is how you would link your custom stylesheet -->
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="kk/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.dataviz.default.min.css" />
+
+    <script src="kk/js/jquery.min.js"></script>
+    <script src="kk/js/kendo.all.min.js"></script>
+
+</head>
+<title>BackPacker</title>
+</head>
+ 
+<body> 
+   
+ 
+  
+  <header class="row">
+    <div class="large-12 columns">
+      <h1 align="left">WELCOME KHEVNA,</h1>
+	  <hr/>
+    </header>
+	
+	</div>
+	
+	<div class="row">
+    <div class="large-6 columns large-centered">
+                <ul class="button-group even-4">
+      <li onclick="window.location.href='TBackPacker.html'"><a href="#TBackPacker.html" id="home">HOME</a></li>
+      <li onclick="window.location.href='TTPW.html'" ><a href="#TTPW.html" id="profile" >PLAN</a></li>
+      <li onclick="window.location.href='Tmessage.html'"><a href="#message.html" id="message">MESSAGE</a></li>
+      <li onclick="window.location.href='Tblog.html'"><a href="#blog.html" id="blog">BLOG</a></li>
+      </ul>
+     </div>
+  </div>
+  
+   
+  
+  
+  <div class="row">    
+    
+     
+     
+    <div class="large-9 push-3 columns">
+      
+			<div id="shipping">
+                <label for="countries" class="info">Scheduled Trips</label>
+
+                <input id="countries" />
+
+                <div class="hint">Start typing the name of the trip</div>
+				<div class="edit"> <button id="editButton" onclick="window.location.href='schedule.html'">Edit!</button> <button id="deleteButton" >Delete</button>
+								</div>
+
+			</div>
+			
+    </div>
+    
+    
+     
+     
+    <div class="large-3 pull-9 columns">
+      <p><img src="kkhevna.jpg" width="320px" height="400px"/></p>  
+      <div id="organizer">
+                <ul id="panelbar">
+                <li>
+                    <span class="k-link k-state-selected">Chat</span>
+                    <div style="padding: 10px;">
+                        <div class="teamMate">
+                            <img src="nitesh.jpg" width="100" height="100" alt="Nitesh TVS">
+                            <h2>Nitesh TVS</h2>
+                            <p>Friend</p>
+                        </div>
+                        <div class="teamMate">
+                            <img src="mounica.jpg" width="100" height="100" alt="Mounica J">
+                            <h2>Mounica J</h2>
+                            <p>Friend</p>
+                        </div>
+                        <div class="teamMate">
+                            <img src="kaushik.jpg" width="100" height="100" alt="Kaushik T">
+                            <h2>Kaushik T</h2>
+                            <p>Friend</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                   Trips Scheduled
+                    <ul>
+                        <li>Road Trip</li>
+                        <li>
+                            Trek
+                            <ul>
+                                <li>Kaligadh</li>
+                                <li>Tail A</li>
+                                <li>Mountain c</li>
+                                <li>Trail D</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+
+                </li>
+                <li>
+                    Schedules
+				
+                    <ul>
+                        <li onclick="window.location.href='schedule.html'">January</li>
+                        <li onclick="window.location.href='schedule.html'">February</li>
+                        <li onclick="window.location.href='schedule1.html'">March</li>
+                        <li onclick="window.location.href='schedule1.html'">April</li>
+                        <li onclick="window.location.href='schedule.html'">May</li>
+                    </ul>
+                </li>
+                <li disabled="disabled">
+                    Communication
+                </li>
+            </ul>
+                <div id="bottom"></div>
+            </div>
+            
+      
+      
+        
+    </div>
+    
+  </div>
+    
+  
+   <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p> © Khevna Khona | Vikram Trantravahi. All rights reserved</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Email us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+  </footer>
+  <style scoped>
+  
+  body{
+		background: url('tbackpacker.jpg') no-repeat center center fixed;
+
+-moz-background-size: cover;
+
+-webkit-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
+					text-align: center;
+					height: auto;
+					width: auto;
+			}
+		h1{
+		Color: #3399FF;
+		}	
+			
+			a:hover {
+  color: black ;
+  background-color: #def ;
+}
+			
+			
+			#main{
+			
+			
+			width: 700px;
+			
+			Color: #3399FF;
+			font-family:verdana
+			
+			}
+                .menu {
+                     width: 1000px;
+                margin: 30px auto;
+                padding-top: 120px;
+                background: url('bkgnd.jpg') no-repeat 0 0;
+                }
+				.info {
+                    display: block;
+                    line-height: 22px;
+                    padding: 0 5px 5px 0;
+                    color: #3399FF;
+                }
+
+                #shipping {
+	                width: 482px;
+	                height: 152px;
+	                padding: 110px 0 0 30px;
+	                background: url('../content/web/autocomplete/shipping.png') transparent no-repeat 0 0;
+                    margin: 100px auto;
+                }
+
+                .k-autocomplete
+                {
+                    width: 250px;
+                    vertical-align: aside;
+                }
+
+                .hint {
+                    line-height: 22px;
+                    color: #aaa;
+                    font-style: italic;
+                    font-size: .9em;
+                    color: #3399FF;
+                }
+				#organizer {
+                    width: 300px;
+                    margin: 0 auto;
+                    padding: 47px 0 0 0;
+                    background: url('../content/web/panelbar/orgHead.png') transparent no-repeat 0 0;
+					Text-align: center-left;
+					color: #3399FF;
+                }
+                #bottom {
+                    width: 300px;
+                    height: 90px;
+                    background: url('../content/web/panelbar/orgFoot.png') transparent no-repeat 0 0;
+                }
+                .teamMate:after {
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    line-height: 0;
+                    clear: both;
+                    visibility: hidden;
+					color: #3399FF;
+                }
+                .teamMate h2 {
+                    font-size: 1.4em;
+                    font-weight: normal;
+                    padding-top: 20px;
+					color: #3399FF;
+                }
+                .teamMate p {
+                    margin: 5px 0;
+					color: #3399FF;
+                }
+                .teamMate img {
+                    float: left;
+                    margin: 5px 15px 5px 5px;
+                    border: 1px solid #ccc;
+                }
+
+	</style> 
+		<script>
+			
+                $(document).ready(function() {
+                    $("#menu").kendoMenu();
+                
+				 
+                    var data = [
+                            "Road Trip....",
+							"Abroad trip....",
+							"Some trip..",
+							"Some country",
+							"India",
+							"China",
+							"Japan",
+							"Germany",
+							"Greece",
+							"Italy",
+							"Ireland",
+							"USA",
+                            "United Kingdom",
+                            "Vatican City"
+                        ];
+
+                    //create AutoComplete UI component
+                    $("#countries").kendoAutoComplete({
+                        dataSource: data,
+                        filter: "startswith",
+                        placeholder: "Select country...",
+                        separator: ", "
+                    });
+					
+                });
+				$("#editButton").kendoButton();
+					$("#deleteButton").kendoButton();
+				$(document).ready(function() {
+                    $("#panelbar").kendoPanelBar({
+                        expandMode: "single"
+                    });
+                });
+				
+				
+
+</script>	
+   
+</body>
+</html>

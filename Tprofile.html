@@ -1,0 +1,335 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="styles/kendo.dataviz.default.min.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+    
+        <div id="example">
+            <div class="dash-head"> Dashboard </div>
+            <div class="panel-wrap">
+                <div id="sidebar">
+                    <div id="profile" class="widget">
+                        <h3>Profile <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
+                        <div>
+                            <div class="profile-photo"></div>
+                            <h4>Khevna Khona</h4>
+                            <p>Creator</p>
+                        </div>
+                    </div>
+                    <div id="teammates" class="widget">
+                        <h3>Teammates <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
+                        <div>
+                            <div class="team-mate">
+                                <img src="nitesh.jpg" alt="Andrew Fuller">
+                                <h4>Nitesh TVS</h4>
+                                <p>Team mate</p>
+                            </div>
+                            <div class="team-mate">
+                                <img src="mounica.jpg" alt="Nancy Leverling">
+                                <h4>Mounica J</h4>
+                                <p>Friend</p>
+                            </div>
+                            <div class="team-mate">
+                                <img src="kaushik.jpg" alt="Robert King">
+                                <h4>Kaushik T</h4>
+                                <p>Friend</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="main-content">
+                    <div id="news" class="widget">
+                        <h3>News <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
+                        <div>
+
+                            <h4><span>Jan 10, 2015</span>Back your bags soon!!</h4>
+
+                            <h4><span>Dec 1, 2014</span> Barcelona throwbacks/h4>
+
+                            <h4><span>Nov 22, 2014</span> Dubai blog</h4>
+
+                            <h4><span>Nov 20, 2013</span>Check your tickets</h4>
+                        </div>
+                    </div>
+                    <div id="blogs" class="widget">
+                        <h3>Blogs <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
+                        <div>
+                            <h4>Seattle</h4>
+                            <p class="blog-info">Friday, February 14, 2014</p>
+                            <p>   </p>
+                            <h4>Hawaii</h4>
+                            <p class="blog-info">Friday, February 14, 2014 </p>
+                            <p></p>
+
+                            <h4>New york</h4>
+                            <p class="blog-info">Thursday, February 13, 2014</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function() {
+
+                    $("#sidebar").kendoSortable({
+                        filter: ">div",
+                        cursor: "move",
+                        connectWith: "#main-content",
+                        placeholder: placeholder,
+                        hint: hint
+                    });
+
+                    $("#main-content").kendoSortable({
+                        filter: ">div",
+                        cursor: "move",
+                        connectWith: "#sidebar",
+                        placeholder: placeholder,
+                        hint: hint
+                    });
+
+                    //exapand
+                    $(".panel-wrap").on("click", "span.k-i-arrowhead-s", function(e) {
+                        var contentElement = $(e.target).closest(".widget").find(">div");
+                        $(e.target)
+                            .removeClass("k-i-arrowhead-s")
+                            .addClass("k-i-arrowhead-n");
+
+                        kendo.fx(contentElement).expand("vertical").stop().play();
+                    });
+
+                    //collapse
+                    $(".panel-wrap").on("click", "span.k-i-arrowhead-n", function(e) {
+                        var contentElement = $(e.target).closest(".widget").find(">div");
+                        $(e.target)
+                            .removeClass("k-i-arrowhead-n")
+                            .addClass("k-i-arrowhead-s");
+
+                        kendo.fx(contentElement).expand("vertical").stop().reverse();
+                    });
+                });
+
+                function placeholder(element) {
+                    return element.clone().addClass("placeholder");
+                }
+
+                function hint(element) {
+                    return element.clone().addClass("hint")
+                                .height(element.height())
+                                .width(element.width());
+                }
+            </script>
+
+            <style>
+                #example {
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+
+                .dash-head {
+                    width: 970px;
+                    height: 80px;
+                    background: url('../content/web/sortable/dashboard-head.png') no-repeat 50% 50% #222222;
+                }
+
+                .panel-wrap {
+                    display: table;
+                    margin: 0 0 20px;
+                    width: 968px;
+                    background-color: #f5f5f5;
+                    border: 1px solid #e5e5e5;
+                }
+
+                #sidebar {
+                    display: table-cell;
+                    margin: 0;
+                    padding: 20px 0 20px 20px;
+                    width: 220px;
+                    vertical-align: top;
+                }
+
+                #main-content {
+                    display: table-cell;
+                    margin: 0;
+                    padding: 20px;
+                    width: 680px;
+                    vertical-align: top;
+                }
+
+                .widget.placeholder {
+                    opacity: 0.4;
+                    border: 1px dashed #a6a6a6;
+                }
+
+                /* WIDGETS */
+                .widget {
+                    margin: 0 0 20px;
+                    padding: 0;
+                    background-color: #ffffff;
+                    border: 1px solid #e7e7e7;
+                    border-radius: 3px;
+                    cursor: move;
+                }
+
+                .widget:hover {
+                    background-color: #fcfcfc;
+                    border-color: #cccccc;
+                }
+
+                .widget div {
+                    padding: 10px;
+                    min-height: 50px;
+                }
+
+                .widget h3 {
+                    font-size: 12px;
+                    padding: 8px 10px;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid #e7e7e7;
+                }
+
+                .widget h3 span {
+                    float: right;
+                }
+
+                .widget h3 span:hover {
+                    cursor: pointer;
+                    background-color: #e7e7e7;
+                    border-radius: 20px;
+                }
+
+                /* PROFILE */
+                .profile-photo {
+                    width: 80px;
+                    height: 80px;
+                    margin: 10px auto;
+                    border-radius: 100px;
+                    border: 1px solid #e7e7e7;
+                    background: url('../content/web/Customers/ISLAT.jpg') no-repeat 50% 50%;
+                }
+
+                #profile div {
+                    text-align: center;
+                }
+
+                #profile h4 {
+                    width: auto;
+                    margin: 0 0 5px;
+                    font-size: 1.2em;
+                    color: #1f97f7;
+                }
+
+                #profile p {
+                    margin: 0 0 10px;
+                }
+
+                /* BLOGS & NEWS */
+                #blogs div,
+                #news div {
+                    padding: 0 20px 20px;
+                }
+
+                #teammates h4,
+                #blogs h4,
+                #news h4 {
+                    width: auto;
+                    margin: 20px 0 2px;
+                    font-size: 1.4em;
+                    color: #1f97f7;
+                    font-weight: normal;
+                }
+
+                .blog-info {
+                    margin: 0 0 10px;
+                    font-size: .9em;
+                    color: #787878;
+                }
+
+                #sidebar #blogs h4 {
+                    font-size: 1em;
+                }
+
+                #sidebar #blogs p {
+                    display: none;
+                }
+
+                #sidebar #blogs .blog-info {
+                    display: block;
+                }
+
+                #main-content #news h4 {
+                    font-size: 1.2em;
+                    line-height: 1.4em;
+                    height: 40px;
+                }
+
+                #main-content #news h4 span {
+                    display: block;
+                    float: left;
+                    width: 100px;
+                    height: 40px;
+                    color: #000;
+                }
+
+                #sidebar #news h4 {
+                    font-size: 1em;
+                }
+
+                #sidebar #news h4 span {
+                    display: block;
+                    margin-bottom: 3px;
+                    color: #000;
+                }
+
+                /* TEAMMATES */
+                .team-mate:after {
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    line-height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+
+                #teammates .team-mate h4 {
+                    font-size: 1.4em;
+                    font-weight: normal;
+                    margin-top: 12px;
+                }
+
+                .team-mate p {
+                    margin: 0;
+                }
+
+                .team-mate img {
+                    float: left;
+                    margin: 0 15px 0 0;
+                    border: 1px solid #e7e7e7;
+                    border-radius: 60px;
+                }
+
+                .hint {
+                    width: 250px;
+                    height: 100px;
+                    overflow: hidden;
+                }
+
+                .hint > h3 {
+                    padding-left: 20px;
+                }
+            </style>
+        </div>
+
+
+</body>
+</html>

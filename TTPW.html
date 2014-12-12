@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html >
+<head>
+<!--In the header of your page, paste the following for Kendo UI Web styles-->
+<link rel="stylesheet" href="css/foundation.css">
+
+  <!-- This is how you would link your custom stylesheet -->
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="js/vendor/modernizr.js"></script>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.slider.js"></script>
+  <link rel="stylesheet" href="kk/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.dataviz.default.min.css" />
+
+    <script src="kk/js/jquery.min.js"></script>
+    <script src="kk/js/kendo.all.min.js"></script>
+	
+
+
+</head>
+<title>BackPacker</title>
+</head>
+ 
+<body> 
+<header class="row">
+    <div class="large-12 columns">
+      <h1 style="color:#3399FF;";>PLANNING</h1>
+	  <hr/>
+    </header>
+	
+	</div>
+	
+     <div class="row">
+    
+   <div class="large-6 columns large-centered">
+                <ul class="button-group even-4">
+      <li onclick="window.location.href='TBackPacker.html'"><a href="#TBackPacker.html" id="home">HOME</a></li>
+      <li onclick="window.location.href='Tprofile.html'"><a href="#Tprofile.html" id="profile">PROFILE</a></li>
+      <li onclick="window.location.href='Tmessage.html'"><a href="#Tmessage.html" id="message">MESSAGE</a></li>
+      <li onclick="window.location.href='Tblog.html'"><a href="#Tblog.html" id="blog">BLOG</a></li>
+      </ul>
+     </div>
+  </div>
+  <br>
+  <br>
+  
+   
+  
+  
+  <div class="row">    
+    
+     
+     
+    <div class="large-9 push-3 columns">
+      
+       
+				<div id="location">
+				<label>Location <span class="k-textbox k-space-left"> <input type="text" id="countries" /><a href="#" class="k-icon k-i-search">&nbsp;</a>
+                </span>
+				</label>
+				</div>
+				<br>
+				<br>
+				<div class="side bar">
+				<label>Accommodations
+				<input id="accommodations" type="text"></label></div>
+				<br>
+				<br>
+<div id="filters" name="sq"></div>
+<div id="Options">
+<label> Activities :
+
+<select id="activities">
+                <option>Hiking</option>
+                <option>Party</option>
+                <option>Wish to relax</option>
+                <option> Shopping</option>
+            </select></label>
+<br>
+				<br>
+<label> Interest :
+<select id="interests">
+            <option>sleeping</option>
+                <option>eating</option>
+                <option>watching movies</option>
+                <option>chilling</option>
+            </select></label>
+<br>
+
+<br>
+<label>No of people<span class="description"></span>
+                    <input id="numeric" type="number" value="17" min="0" max="100" step="1" style="text-align: left;" />
+                </label></div>
+
+
+
+<br>
+				<br>
+				<br>
+				<br>
+<button id="Result"class="k-button" onclick="window.location.href='TResults_html.html'">Search</button>
+    </div>
+    
+    
+     
+     
+    <div class="large-3 pull-9 columns">
+        
+     <div class="demo-section k-header" style="width: 300px; text-align: center;">
+                    <div id="calendar"></div>
+                </div>
+      
+      <p>
+	  <label>BUDGET</label>
+	  <label id="sliderLabel">Low</label>
+                    <div class="range-slider round" data-slider data-options="start: 1000; end: 10,000;">
+  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+  <span class="range-slider-active-segment"></span>
+  <input type="hidden">
+</div>
+<label id="sliderLabel">Medium</label>
+<div class="range-slider round" data-slider data-options="start: 10,000; end: 40,000;">
+  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+  <span class="range-slider-active-segment"></span>
+  <input type="hidden">
+</div>
+<label id="sliderLabel">High</label>
+<div class="range-slider round" data-slider data-options="start: 40,000; end: 100,000;">
+
+  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+  <span class="range-slider-active-segment"></span>
+  <input type="hidden">
+</div>
+
+	  
+	  
+	  </p>
+        
+    </div>
+    
+  </div>
+    
+  
+   
+  
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p> © Khevna Khona | Vikram Trantravahi. All rights reserved</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Email us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+  </footer>
+   <style scoped>
+   body
+                {
+                
+					background: url('ttpw.jpg') no-repeat center center fixed;
+
+-moz-background-size: cover;
+
+-webkit-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
+					text-align: center;
+					height: auto;
+					width: auto;
+                }
+				label {
+           Color: #3399FF;
+			text-shadow: 0 1px 0 #fff;
+			font-size: 20px;
+			font-weight: bold;
+        }
+				.forms li > * {
+                width: 200px;
+            }
+			li{
+			Color: #3399FF;
+			}
+			.description {
+                    display:inline-block;
+                    width: 100px;
+                    font-weight: bold;
+                    padding: 0px 0px;
+                }
+   </style>
+   <script>
+   
+  
+    $(document).ready(function() {
+		
+				 $("#calendar").kendoCalendar();
+                });
+				 $(document).ready(function () {
+                    var data = [
+                            "Albania",
+                            "Andorra",
+                            "Armenia",
+                            "Austria",
+                            "Azerbaijan",
+                            "Belarus",
+                            "Belgium",
+                            "Bosnia & Herzegovina",
+                            "Finland",
+                            "France",
+                            "Georgia",
+                            "Germany",
+                            "Greece",
+                            "Hungary",
+                            "Iceland",
+                            "Ireland",
+                            "Italy",
+							"India",
+                            "Kosovo",
+                            "Latvia",
+                            "Liechtenstein",
+                            "Lithuania",
+                            "Luxembourg",
+                            "Macedonia",
+                            "Malta",
+                            "Moldova",
+                            "Monaco",
+                            "Montenegro",
+                            "Netherlands",
+                            "Norway",
+                            "Poland",
+                            "Portugal",
+                            "Romania",
+                            "Russia",
+                            "San Marino",
+                            "Serbia",
+                            "Slovakia",
+                            "Slovenia",
+                            "Spain",
+                            "Sweden",
+                            "Switzerland",
+                            "Turkey",
+                            "Ukraine",
+                            "United Kingdom",
+                            "Vatican City"
+                        ];
+
+                    //create AutoComplete UI component
+                    $("#countries").kendoAutoComplete({
+                        dataSource: data,
+                        filter: "startswith",
+                        placeholder: "Select country...",
+                        separator: ", "
+                    });
+					var acc=[ 
+					"hotels",
+					"hostels",
+					"cheap hotels",
+					"5-star hotels",
+					"resorts"
+					
+					];
+					$("#accommodations").kendoAutoComplete({
+					dataSource: acc,
+					filter: "startswith",
+					separatoe: ","
+                });
+				 $("#activities").kendoDropDownList();
+						$("#interests").kendoDropDownList();
+
+					var activities = $("#activities").data("kendoDropDownList");
+
+                    activities.select(0);
+                    var interests = $("#interests").data("kendoDropDownList");
+
+                    function onChange() {
+                        var value = $("#activities").val();
+                        $("#filters")
+                            .toggleClass("hiking", value == 1)
+                            .toggleClass("golf", value == 2)
+                            .toggleClass("activity smthng", value == 3)
+							.toggleClass("bllah", value==4);
+                    };
+					$("#numeric").kendoNumericTextBox();
+					
+             });
+			  $(document).foundation();
+   </script>
+ </body>
+ </html>

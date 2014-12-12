@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="kk/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="kk/styles/kendo.dataviz.default.min.css" />
+
+    <script src="kk/js/jquery.min.js"></script>
+    <script src="kk/js/kendo.all.min.js"></script>
+</head>
+<body>
+    
+        <div id="example" class="container">
+			<div id="header" class="header">
+			<button id="forgotP" class="k-button" align="right" onclick="window.location.href='Password.html'">Forgot Password?</button>
+			</div>
+			<p>
+		<div class="section">
+		
+			
+            
+                
+                       <h3>  <input id="User_name" class="k-textbox" value="" placeholder="username" /> </h3>
+                    
+                        <h3>  <input id="password" class="k-textbox" type="password" placeholder="password"/> </h3>
+                   
+           
+			
+			 
+			
+		
+		
+			<button id="Login" class="k-button" onclick="window.location.href='TBackPacker.html'">Login</button>
+			<button id="Signup" class="k-button"onclick="window.location.href='New_Acc.html'">Sign up</button>
+			
+			
+			</p>
+			</div>
+					
+			<script>
+                $(document).ready(function() {
+                    $("user_name").kendoTextBox();
+
+                    $("#password").kendoTextBox();
+
+                  
+					$("Login").kendoButton();
+					$("CancelB").kendoButton();
+					$("forgotP").kendoButton();
+                
+                }); 
+            </script>
+			           <style>
+                
+					body
+                {
+                
+					background: url('tlogin.jpg') no-repeat center center fixed;
+
+-moz-background-size: cover;
+
+-webkit-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
+					
+					
+				
+                }
+				.section{
+				text-align: center;
+				}
+				.header{
+				text-align: right;
+				}
+
+               
+				
+            </style>
+        </div>
+
+
+</body>
+</html>
